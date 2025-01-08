@@ -6,10 +6,10 @@ import { v4 as uuidv4 } from 'uuid'
 
 const Todo = () => {
     const [content, setContent] = useState<string>('')
-    const handleContentChange = (reason: any) => {
+    const handleContentChange = (reason: string) => {
         setContent(reason)
     }
-    const handleSubmit = (e: any) => {
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
         const data = {
             id: uuidv4(),
